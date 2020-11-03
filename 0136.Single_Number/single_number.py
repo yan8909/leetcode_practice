@@ -13,17 +13,18 @@
 
 # Solution 1
 class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
+    def singleNumber(self, nums) -> int:
         res = []
-        if i not in nums:
-            res.append(i)
-        else:
-            res.remove(i)
+        for i in nums:
+            if i not in res:
+                res.append(i)
+            else:
+                res.remove(i)
         return res[i] 
 
 # Solution 2
-class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        # (1+2+3)*2 - (1+1+2+2+3) = 3
-        return sum(set(nums))*2 - sum(nums) 
+# class Solution:
+#     def singleNumber(self, nums) -> int:
+#         # (1+2+3)*2 - (1+1+2+2+3) = 3
+#         return sum(set(nums))*2 - sum(nums) 
         
